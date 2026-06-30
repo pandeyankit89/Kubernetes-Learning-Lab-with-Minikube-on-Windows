@@ -342,6 +342,19 @@ kubectl logs nginx
 
 ---
 
+## To edit index.html
+
+```powershell
+kubectl exec -it nginx -- /bin/bash
+apt-get update && apt-get install vim -y
+vi /usr/share/nginx/html/index.html
+exit
+
+minikube service nginx-service --url
+```
+
+---
+
 ## Delete Pod
 
 ```powershell
